@@ -10,7 +10,6 @@ public class TripDTO {
 	private int count;
 	
 	public TripDTO() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public TripDTO(String name, String phone, Date startDate, Date endDate, int count) {
