@@ -60,7 +60,7 @@
 /* -------------------------------- */
 
 .main {
-    padding: 150px 50px 350px 50px;
+    padding: 150px 50px 50px 50px;
     margin: 0 10%;
 }
 element.style {
@@ -69,25 +69,30 @@ element.style {
 
 .mainFlex {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    gap: 60px;
     align-items: center;
+    /* flex-direction: column-reverse; */
+    margin: 0 auto;
 }
 
 .mainImage {
-    border-radius: 40px;
-    width: 60%;
-    height: 500px;
-    background-color: #2877ea;
-    overflow: hidden /* 이미지 크롭 */
+border-radius: 40px;
+border-radius: 40px;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    flex-shrink: 0;    
+    /* 사진을 정중앙으로*/
+    margin: 0 auto;
 }
 
 .mainImage img {
-    width: 100%; /* 부모 박스 너비에 꽉 차게 */
-    height: 100%; /* 부모 박스 높이에 꽉 차게 */
-    object-fit: cover; /* 비율을 유지하면서 박스 채움 */
-    transform: scale(1.3) translateY(-45px);
-    object-position: 80% center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
+    object-position: center;
 }
 
 @keyframes fadeIn {
@@ -121,7 +126,7 @@ element.style {
 }
 
 .mainCopy p2{
-    margin: 150px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
     font-size: 23px;
     color: #8cbaff;
 }
@@ -175,7 +180,9 @@ element.style {
 /* -------------------------------- */
 
 .chartMain {
-    margin: 0px 10%;
+    margin-top: 0px; 
+    margin-left: 10%;
+    margin-right: 10%;
     border-radius: 25px;
     box-shadow: 0px 0px 15px rgba(0,0,0,.2);
     background-color: rgb(245, 245, 245);
@@ -191,34 +198,34 @@ element.style {
 }
 
 .chartText1 {
-    padding: 0px 250px 10px 250px;
+    /* 좌우 여백을 줄이고 공간 확보 */
+    padding: 0 40px 20px 40px; 
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    color:rgb(50, 50, 50);
-    font-size: 17px;
+    justify-content: space-between; /* 요소들 사이 간격을 균등하게 */
+    align-items: flex-start;
+    gap: 15px; /* 항목 간의 물리적 간격 */
+    color: rgb(50, 50, 50);
+    font-size: 15px; 
     font-weight: 600;
+    width: 100%; /* 부모 너비에 맞춤 */
 }
 
-.ctText1 {
+/* 5개 항목 공통 적용 */
+.ctText1, .ctText2, .ctText3, .ctText4, .ctText5 {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    gap:20px;
-}
-
-.ctText2 {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap:20px;
+    gap: 10px;
+    flex: 1;    /* 5개 박스를 균등하게 1:1:1:1:1로 분배 */
+    min-width: 0; /* flex 박스 안에서 요소가 튀어나가는 것을 방지 */
 }
 
 .textBox {
     height: 40px;
-    width: 400px;
+    width: 100%; 
     border-radius: 7px;
     border: 1px solid rgb(216, 216, 216);
+    padding: 0 10px;
+    box-sizing: border-box; 
 }
 
 .button {
@@ -232,15 +239,16 @@ element.style {
 #chartBt {
     margin-bottom: 70px;
     border-radius: 7px;
-    width: 820px;
+    width: calc(100% - 100px); /* 좌우 패딩 50px씩을 제외한 전체 너비 */
+    max-width: 1200px; /* 너무 길어지지 않게 최대치 설정 */
     color: white;
     font-size: 20px;
     font-weight: 600;
     height: 50px;
     border: 0;
     background-color: rgb(50, 50, 50);
-    transition: inherit;
-    opacity: 80%;
+    transition: .3s ease-out;
+    opacity: 0.8;
 }
 
 #chartBt:hover {
@@ -256,25 +264,35 @@ element.style {
 
 .chart {
     background-color: white;
-    padding: 250px;
+    padding: 40px; 
+    margin: 0 40px; /* 좌우 여백을 입력 폼과 맞춤 */
+    border-radius: 15px;
 }
 
-.chartTable{
+.chartTable {
     width: 100%;
     border-collapse: collapse;
-}
-
-.chartTable th {
-    background-color: rgb(216, 216, 216);
+    table-layout: fixed; /* 컬럼 너비를 균등하게 고정 */
 }
 
 .chartTable th, .chartTable td {
-    font-size: 20px;
-    text-align: left;
+    padding: 15px 10px; /* 셀 내부 여백 */
+    font-size: 16px;    /* 5개 항목이므로 폰트 크기 소폭 조절 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    border-bottom: 1px solid rgb(230, 230, 230);
+    word-break: break-all; /* 내용이 길어질 경우 자동 줄바꿈 */
 }
 
-.chartTotal {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.chartTable th {
+    background-color: rgb(240, 240, 240);
+    color: #2877ea; /* 헤더 강조색 */
+    font-weight: 700;
 }
+
+/* 첫 번째 No. 컬럼만 너비를 좁게 설정 */
+.chartTable th:first-child, 
+.chartTable td:first-child {
+    width: 60px;
+}
+
+

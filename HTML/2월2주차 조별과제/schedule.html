@@ -40,13 +40,13 @@
             <div class ="mainFlex">
                 <div class = "mainCopy">
                     <p> 여행 일정관리</p>
-                    <h1>여행일정 관리, <br> 뭐든 물어보세요!</h1>
+                    <h1>여행일정 관리, <br> 저희가 도와드립니다!</h1>
                     <p2>플립으로 여행일정관리, 스마트하게!</p2>
                 </div>                
             </div>
 
-        <div class = "mainImage"> /*위치 조정 */
-                <img src =".\source\BG_img.png"> /*변경 예정*/
+        <div class = "mainImage"> 
+                <img src =".\source\BG_schedule.png"> /*변경 예정*/
             </div>
         </div>
         <div class ="chartMain">
@@ -54,58 +54,65 @@
                 <div class="chartTitle">
                     <h2>여행 일정 관리</h2>
                 </div>
-                <div class="chartText1">
-                    <div class ="ctText1">
-                        <p>항목명 (Text)</p>
-                        <input type="text" class="textBox">
-                    </div>
-                    <div class ="ctText2">
-                        <p>항목명 (Number)</p>
-                        <input type="text" class="textBox">
-                    </div>
-                </div>
+        <div class="chartText1">
+            <div class="ctText1">
+                <p>여행장소 (Text)</p>
+                <input type="text" class="textBox">
+            </div>
+            <div class="ctText2">
+                <p>출발지 (Text)</p>
+                <input type="text" class="textBox">
+            </div>
+            <div class="ctText3">
+                <p>목적지 (Text)</p>
+                <input type="text" class="textBox">
+            </div>
+            <div class="ctText4">
+                <p>여행일 (Date)</p>
+                <input type="date" class="textBox">
+            </div>
+            <div class="ctText5">
+                <p>시간 (Time)</p>
+                <input type="time" class="textBox">
+            </div>
+        </div>
                 <div class="button">
                     <button id="chartBt">여행 일정 등록</button>
                 </div>
                 <div class="chart">
-                    <table class="chartTable">
-                        <thead>
-                            <tr>
-                                <th>No.</th>
-                                <th>항목1</th>
-                                <th>항목2</th>
-                                <th>항목3</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>항목내용</td>
-                                <td>항목내용</td>
-                                <td>항목내용</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>항목내용</td>
-                                <td>항목내용</td>
-                                <td>항목내용</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>항목내용</td>
-                                <td>항목내용</td>
-                                <td>항목내용</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="chartTotal">
-                        <p> 항목 미정</p>
-                        <p> 항목 미정</p>
-                </div>
-            </div>
-        </div>
-
+                    
+    <table class="chartTable">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>여행장소</th>
+                <th>출발지</th>
+                <th>목적지</th>
+                <th>여행일</th>
+                <th>시간</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>서울</td>
+                <td>서울역</td>
+                <td>부산역</td>
+                <td>2026-07-13</td>
+                <td>09:00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>부산</td>
+                <td>해운대</td>
+                <td>광안리</td>
+                <td>2026-07-13</td>
+                <td>14:00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                
 
     </main>
 
