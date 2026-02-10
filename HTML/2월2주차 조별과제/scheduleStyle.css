@@ -63,6 +63,9 @@
     padding: 150px 50px 350px 50px;
     margin: 0 10%;
 }
+element.style {
+    width: 400px;
+}
 
 .mainFlex {
     display: flex;
