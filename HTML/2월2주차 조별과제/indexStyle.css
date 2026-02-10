@@ -1,0 +1,389 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top {
+    padding: 30px 50px;
+    margin: 0 10%;
+    position: relative;
+    z-index: 1; /* 이미지 좌표 앞으로 보내기*/
+    border-bottom: 1px solid white;
+    overflow: hidden;
+}
+
+.menuBar {
+    display: flex;
+    justify-content: space-between; /* 로고 아이콘 각각 양쪽에 붙이기 */
+    align-items: center; /* 가운데 정렬 */
+    gap: 20px;
+}
+
+.menuLogo img {
+    display: flex;
+    width: max(80px, 3vw);
+    align-items: center;
+}
+
+.menuLogo p{
+    margin: 0
+}
+
+.menuButton {
+    display: flex;
+    align-items: center; /* 플렉스 가운데 맞춤*/
+    gap: 30px;
+    overflow: hidden;
+}
+
+.menuButton p {
+    margin: 0;
+    font-size: min(20px, 3vw);
+    color: white;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.menuButton p:hover {
+    color:#8cbaff
+}
+
+.menuButton a {
+    text-decoration: none;
+}
+
+.menuButton img {
+    width: 40px;
+}
+
+/* -------------------------------- */
+
+.BG {
+    padding: 50px 50px 650px 50px;
+    margin: 0 10%;
+}
+
+.BG img{
+    position: fixed; /* 배경 뒤로 보낼때 사용*/
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /*이미지 비율에 맞게 채우기*/
+    z-index: -1; /* 이미지 좌표 뒤로 보내기*/
+    filter: brightness(.7)
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.mainCopy {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+
+.mainCopy h1{
+    padding: 10px 0px;
+    font-size: 50px;
+    color: white;
+}
+
+.mainCopy h4{
+    padding: 150px 0px 0px 0px;
+    font-size: 30px;
+    color: white;
+}
+
+/* -------------------------------- */
+
+#bottomBar {
+    padding: 50px 200px;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+}
+
+/* -------------------------------- */
+
+.bottomInfo h5{
+    flex: 1;                
+    margin: 0;              
+    font-weight: 400;       
+    font-size: 14px;      
+}
+
+#bottomText1 {
+    text-align: left;
+}
+
+#bottomText {
+    text-align: right;
+}
+
+.bottomInfo img {
+    width: 40px;   
+}
+
+.bottomInfo {
+    display: flex;           /* 가로 배치 시작 */
+    justify-content: space-between; /* 양쪽 끝으로 벌리기 */
+    width: 100%;             /* 전체 너비 */
+    color: rgb(50, 50, 50);
+}
+
+.imagebox3 {
+    display: flex;
+    background-color: white;
+    height: 100px;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+
+/* -------------------------------- */
+
+#boxFlex {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 10px;
+    flex-wrap: nowrap; /* flex-wrap: wrap 자리가 좁으면 밑으로 줄바꿈 */
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.boxGrid {
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px solid rgb(141, 141, 141);
+    height: 260px;
+    width: 240px;
+    flex-shrink: 0;  /*화면 줄여도 크기 고정*/
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /*모서리 밖으로 튀어나가는 이미지 자르기*/
+}
+
+.boxGrid > img { /* '클래스 > 자식' -> 박스 바로 밑에 있는 자식만 선택*/
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-box {
+    width: 100%;
+    height: 160px;       /* 높이를 여기서 고정 */
+    overflow: hidden;    /* 이미지가 커져도 이 박스를 못 벗어나게 함 */
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;        /* 액자 크기에 맞춤 */
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.boxGrid:hover .img-box img {
+    transform: scale(1.1);
+}
+
+.imageBox {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imageBox h2 {
+    padding-bottom: 25px;
+    color: rgb(50, 50, 50);
+}
+
+.boxText1 {
+    padding: 20px 20px 5px 20px;
+    display: flex;
+    line-height: 1; /* 폰트 크기만큼 영역설정*/
+    font-size: 20px;
+}
+
+.boxText1 img {
+    width: 25px;
+}
+
+.boxText2 {
+    padding: 5px 20px;
+    display: flex;
+    line-height: 1;
+    justify-content: space-between;
+    font-size: 100%;
+    align-items: center;
+    color: rgb(50, 50, 50);
+}
+
+.boxText2 img {
+    width: 50px;
+}
+
+/* -------------------------------- */
+
+.box2Flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    height: 400px;
+    background: linear-gradient(#004be1, #2877ea);
+    line-height: 1;
+    align-items: center;
+    width: 100%;
+
+}
+
+.textArea {
+    padding: 40px;
+    flex: 1; /* 공간의 50% 차지 */
+    height: 100%; /* 높이 꽉 채우기 */
+
+    /* 글자 정가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    align-items: center
+}
+
+.imageArea {
+    box-sizing: border-box;
+    border-radius: 250px 0px 0px 250px;
+    flex: 1; /* 공간의 50% 차지 */
+    height: 100%; /* 높이 꽉 채우기*/
+    overflow: hidden; 
+}
+
+.logo {
+    width: 150px;
+    top: 6px;
+    position: relative;
+    margin: 0 10px;
+
+}
+
+#BG2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 찌그러짐 방지 & 꽉 채우기 */
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease-out;
+}
+
+#BG2:hover {
+    transform: scale(1.1);
+}
+
+.textArea h3{
+    padding: 10px 10px;
+    width: 600px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background-color: #004be1;
+    text-align: center;
+
+}
+
+.textArea h1{
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* -------------------------------- */
+
+.mainInfo {
+    height: 800px;
+    background-color: white;
+    position: relative;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.mainInfo h1 {
+    margin: 0 10%;
+    padding: 100px 50px 100px 50px;
+    text-align: center;
+    color: rgb(50, 50, 50);
+}
+
+.mainInfoBox {
+    /* width: 100%; */
+    gap: 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 10%;
+    padding: 0px 50px 50px 50px;
+}
+
+.infoBoxText {
+    box-sizing: border-box;
+    box-shadow: 0 0px 25px rgba(0, 0, 0, 0.2);;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.infoBoxText p {
+    color: rgb(50, 50, 50);
+    text-align: left;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.infoBoxImage img{
+    width: 200px;
+}
+
+/* -------------------------------- */
+
+.mainInfo2 {
+    position: relative;
+    display: flex;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+}
+
+.mainInfo2Text h1{
+    font-size: 50px;
+    color: #2877ea;
+    text-align: center;
+}
+
+.mainInfo2Text p{
+    color: rgb(100, 100, 100);
+    text-align: center;
+    font-size: 20px;
+}
+
+.mainInfo2::after {
+    content: "";
+    position: absolute;
+    
+    /* 바닥에 딱 붙임 */
+    bottom: 0; 
+    
+    /*양옆 10% 상단 메뉴바와 동일하게 띄움  */
+    left: 10%;   
+    right: 10%;
+    
+    /* 선 두께와 색상 */
+    height: 0.5px;
+    background-color: rgb(141, 141, 141);
+}
