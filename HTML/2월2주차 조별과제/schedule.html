@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget - Plip</title>
+
+    <link rel = "icon" href="./source/favicon.svg" type="image/svg+xml">
+    <link rel = "stylesheet" href="./scheduleStyle.css">
+
+</head>
+<body>
+    
+    <header class = "top">
+        <div class = "menuBar">
+            <div class="menuLogo">
+                <a href="index.html">
+                    <img src=".\source\logo2.svg">
+                </a>
+            </div>
+            <div class="menuButton">
+                <a href="">
+                    <p>TRIP</p>
+                </a>
+                <a href="">
+                    <p>SCHEDULE</p>
+                </a>
+                <a href="budget.html">
+                    <p>BUDGET</p>
+                </a>
+                <a href="">
+                    <p>CHECKLIST</p>
+                </a>
+            </div>
+        </div>
+    </header>
+        
+    <main>
+        <div class = "main">
+            <div class ="mainFlex">
+                <div class = "mainCopy">
+                    <p> 여행 일정관리</p>
+                    <h1>여행일정 관리, <br> 뭐든 물어보세요!</h1>
+                    <p2>플립으로 여행일정관리, 스마트하게!</p2>
+                </div>
+                <div class = "mainImage">
+                    <img src =".\source\BG_img.png"> /*변경 예정*/
+                </div>
+            </div>
+        </div>
+        <div class ="chartMain">
+            <div class ="chartInfo">
+                <div class="chartTitle">
+                    <h2>여행 일정 관리</h2>
+                </div>
+                <div class="chartText1">
+                    <div class ="ctText1">
+                        <p>항목명 (Text)</p>
+                        <input type="text" class="textBox">
+                    </div>
+                    <div class ="ctText2">
+                        <p>항목명 (Number)</p>
+                        <input type="text" class="textBox">
+                    </div>
+                </div>
+                <div class="button">
+                    <button id="chartBt">여행 일정 등록</button>
+                </div>
+                <div class="chart">
+                    <table class="chartTable">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>항목1</th>
+                                <th>항목2</th>
+                                <th>항목3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>항목내용</td>
+                                <td>항목내용</td>
+                                <td>항목내용</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>항목내용</td>
+                                <td>항목내용</td>
+                                <td>항목내용</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>항목내용</td>
+                                <td>항목내용</td>
+                                <td>항목내용</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chartTotal">
+                        <p> 항목 미정</p>
+                        <p> 항목 미정</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="imagebox3">
+            <div class="bottomInfo">
+                <h5 id ="bottomText1">©2026 FOURBYTE. All rights reserved.</h5>
+                <img src = "./source/team_logo2.svg">
+                <h5 id="bottomText">Privacy Policy. Terms of Use.</h5>
+            </div>
+        </div>              
+    
+    </footer>
+
+</body>
+</html>

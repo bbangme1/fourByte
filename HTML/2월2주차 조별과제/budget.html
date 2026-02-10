@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget - Plip</title>
+
+    <link rel = "icon" href="./source/favicon.svg" type="image/svg+xml">
+    <link rel = "stylesheet" href="./budgetStyle.css">
+
+</head>
+<body>
+    
+    <header class = "top">
+        <div class = "menuBar">
+            <div class="menuLogo">
+                <a href="index.html">
+                    <img src=".\source\logo2.svg">
+                </a>
+            </div>
+            <div class="menuButton">
+                <a href="">
+                    <p>TRIP</p>
+                </a>
+                <a href="schedule.html">
+                    <p>SCHEDULE</p>
+                </a>
+                <a href="budget.html">
+                    <p>BUDGET</p>
+                </a>
+                <a href="">
+                    <p>CHECKLIST</p>
+                </a>
+            </div>
+        </div>
+    </header>
+        
+    <main>
+        <div class = "main">
+            <div class ="mainFlex">
+                <div class = "mainCopy">
+                    <p> 여행 예산관리</p>
+                    <h1>스마트한 예산관리로, <br> 여행을 더 즐겁게</h1>
+                    <p2>플립으로 여행 경비를 간편하게 관리하세요.</p2>
+                </div>
+                <div class = "mainImage">
+                    <img src =".\source\BG_img.png">
+                </div>
+            </div>
+        </div>
+        <div class ="chartMain">
+            <div class ="chartInfo">
+                <div class="chartTitle">
+                    <h2>여행 예산 관리</h2>
+                </div>
+                <div class="chartText1">
+                    <div class ="ctText1">
+                        <p>지출 항목명 (Text)</p>
+                        <input type="text" class="textBox">
+                    </div>
+                    <div class ="ctText2">
+                        <p>금액 (Number)</p>
+                        <input type="text" class="textBox">
+                    </div>
+                </div>
+                <div class="button">
+                    <button id="chartBt">지출 내역 등록</button>
+                </div>
+                <div class="chart">
+                    <table class="chartTable">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>지출 항목</th>
+                                <th>금액 (원)</th>
+                                <th>내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>기차표 예매</td>
+                                <td>33,600</td>
+                                <td>교통비</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>에어비앤비 결제</td>
+                                <td>285,000</td>
+                                <td>숙박비</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>경주 맛집</td>
+                                <td>58,000</td>
+                                <td>식비</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chartTotal">
+                        <p> 총 지출 예상 금액</p>
+                        <p> 376,600원</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="imagebox3">
+            <div class="bottomInfo">
+                <h5 id ="bottomText1">©2026 FOURBYTE. All rights reserved.</h5>
+                <img src = "./source/team_logo2.svg">
+                <h5 id="bottomText">Privacy Policy. Terms of Use.</h5>
+            </div>
+        </div>              
+    
+    </footer>
+
+</body>
+</html>
