@@ -16,12 +16,12 @@ public class TripMain {
 		System.out.println("=== 여행 목록 ===");
 		List<TripDTO> tripList = dao.selectAllTrips();
 		for (TripDTO t : tripList) {
-			System.out.println("여행 제목: " + t.getName() + ", 인원: " + t.getCount() + ",출발일: " + t.getStartDate()
-					+ ",종료일: " + t.getEndDate());
+			System.out.println("여행 제목: " + t.getName() + ", 인원: " + t.getCount() + ", 출발일: " + t.getStartDate()
+					+ ", 종료일: " + t.getEndDate() + "\n");
 		}
 		
 		// 3. [팀원 B] 여행 날짜 기준 일정 출력
-		System.out.println("\n=== 날짜 목록 ===");
+		System.out.println("=== 날짜 목록 ===");
 		List<ScheduleDTO> Schedulelist =  dao.selectDateSchedule("2025-04-01");
 		
 		for (ScheduleDTO s : Schedulelist) {
