@@ -1,14 +1,14 @@
 package trip;
 
-public class BudgitItem {
+public class BudgitItemDTO {
 	private String itemName;
 	private int price;
 	
-	public BudgitItem() {
+	public BudgitItemDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BudgitItem(String itemName, int price) {
+	public BudgitItemDTO(String itemName, int price) {
 		super();
 		this.itemName = itemName;
 		this.price = price;
