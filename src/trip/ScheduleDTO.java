@@ -9,13 +9,8 @@ public class ScheduleDTO {
 	private Date visitDate;
 	private Date time;
 	
-	public ScheduleDTO() {} // 생성자 메서드
-	public ScheduleDTO(String place, String departure, String location, Date visitDate, Date time) {
-		this.place = place;
-		this.departure = departure;
-		this.location = location;
-		this.visitDate = visitDate;
-		this.time = time;
+	public ScheduleDTO() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public ScheduleDTO(String place, String departure, String location, Date visitDate, Date time) {
