@@ -239,10 +239,10 @@ border-radius: 40px;
 #chartBt {
     margin-bottom: 70px;
     border-radius: 7px;
-    width: calc(100% - 100px); /* 좌우 패딩 50px씩을 제외한 전체 너비 */
-    max-width: 1200px; /* 너무 길어지지 않게 최대치 설정 */
+    width: calc(30% - 170px); /* 등록 버튼 가운데 항목과 크기 일치*/
+    max-width: 1200px;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     height: 50px;
     border: 0;
