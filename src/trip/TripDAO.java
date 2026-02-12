@@ -53,8 +53,14 @@ public class TripDAO {
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
-				list.add(new TripDTO(rs.getString("name"), rs.getString("phone"), rs.getDate("start_date"),
-						rs.getDate("end_date"), rs.getInt("count")));
+				TripDTO dto = new TripDTO();
+				dto.setName(rs.getString("name"));
+				dto.setPhone(rs.getString("name"));
+				dto.setStartDate(rs.getDate("start_date"));
+				dto.setEndDate(rs.getDate("end_date"));
+				dto.setCount(rs.getInt("count"));
+				
+				list.add(dto);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,17 +71,15 @@ public class TripDAO {
 	}
 
 	// [팀원 B] 여행 날짜 기준 일정 조회
-	public List<ScheduleDTO> selectDateSchedule(String visit) {
+	public List<ScheduleDTO> selectDateSchedule() {
 		
 		List<ScheduleDTO> list = new ArrayList<>();
-		java.sql.Date date = java.sql.Date.valueOf(visit);
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbUrl, dbUsr, dbPwd);
-			String sql = "SELECT * FROM schedule WHERE visit_date = ?";
+			String sql = "SELECT * FROM schedule order by visit_date";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setDate(1, date);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				ScheduleDTO dto = new ScheduleDTO();
@@ -84,7 +88,7 @@ public class TripDAO {
 				dto.setDeparture(rs.getString("departure"));
 				dto.setLocation(rs.getString("location"));
 				dto.setVisitDate(rs.getDate("visit_date"));
-				dto.setTime(rs.getDate("time"));
+				dto.setTime(rs.getTime("time"));
 				
 				list.add(dto);
 			}
@@ -138,7 +142,7 @@ public class TripDAO {
 	}
 
 	// [팀원 D] 체크리스트 조회
-	public List<CheckListDTO> selectChecklist(long tripId) {
+	public List<CheckListDTO> selectChecklist(long trip_id) {
 		List<CheckListDTO> list = new ArrayList<>();
 		String sql = "SELECT * FROM checklist WHERE trip_id = ?";
 
@@ -146,10 +150,14 @@ public class TripDAO {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbUrl, dbUsr, dbPwd);
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setLong(1, tripId);
+			pstmt.setLong(1, trip_id);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
-				list.add(new CheckListDTO(rs.getString("item_name"), rs.getBoolean("is_checked")));
+				CheckListDTO dto = new CheckListDTO();
+				dto.setItemName(rs.getString("item_name"));
+				dto.setChecked(rs.getBoolean("is_checked"));
+				
+				list.add(dto);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,19 +1,20 @@
 package trip;
 
 import java.sql.Date;
+import java.sql.Time;
 
 public class ScheduleDTO {
 	private String place;
 	private String departure;
 	private String location;
 	private Date visitDate;
-	private Date time;
+	private Time time;
 	
 	public ScheduleDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ScheduleDTO(String place, String departure, String location, Date visitDate, Date time) {
+	public ScheduleDTO(String place, String departure, String location, Date visitDate, Time time) {
 		super();
 		this.place = place;
 		this.departure = departure;
@@ -54,11 +55,11 @@ public class ScheduleDTO {
 		this.visitDate = visitDate;
 	}
 
-	public Date getTime() {
+	public Time getTime() {
 		return time;
 	}
 
-	public void setTime(Date time) {
+	public void setTime(Time time) {
 		this.time = time;
 	}
 	
