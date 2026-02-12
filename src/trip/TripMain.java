@@ -39,7 +39,7 @@ public class TripMain {
 		System.out.println("\n=== 체크리스트 관리 ===");
 
 		// 6. [팀원 D] 목록 변경
-		dao.updateCheckStatus(2, false, "카메라");
+		dao.updateCheckStatus(3, false, "선크림");
 
 		// 7. [팀원 D] 목록 조회 및 구분 출력
 		List<CheckListDTO> checklist = dao.selectChecklist(3);
