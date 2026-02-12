@@ -122,15 +122,15 @@ public class TripDAO {
 	}
 
 	// [팀원 D] 체크 여부 변경
-	public int updateCheckStatus(long id, boolean isChecked, String itemName) {
-		String sql = "UPDATE checklist SET is_checked = ? WHERE id = ? and item_name = ?";
+	public int updateCheckStatus(long trip_id, boolean isChecked, String itemName) {
+		String sql = "UPDATE checklist SET is_checked = ? WHERE trip_id = ? and item_name = ?";
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbUrl, dbUsr, dbPwd);
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setBoolean(1, isChecked);
-			pstmt.setLong(2, id);
+			pstmt.setLong(2, trip_id);
 			pstmt.setString(3, itemName);
 			result = pstmt.executeUpdate();
 		} catch (Exception e) {
